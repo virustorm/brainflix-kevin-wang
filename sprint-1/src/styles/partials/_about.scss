@@ -2,11 +2,13 @@
 	padding: 0 5%;
 
 	&__title {
-		margin: 0 0 16px 0;
+		margin: 32px 0 16px 0;
 	}
 
 	&__date {
 		margin: 0 0 0 8px;
+		color: $silver;
+		font-weight: 100;
 
 		&-box {
 			display: flex;
@@ -30,5 +32,13 @@
 
 	&__like__img {
 		margin-left: 10%;
+	}
+
+	&__para {
+		margin: 24px 0 40px 0;
+		&-text {
+			margin: 0;
+			font-weight: 100;
+		}
 	}
 }

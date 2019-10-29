@@ -3,6 +3,7 @@ import Header from './components/Header';
 import './styles/main.css';
 import Video from './components/Video';
 import About from './components/About';
+import Comments from './components/Comments';
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Header />
 			<Video />
 			<About />
+			<Comments />
 		</div>
 	);
 }
