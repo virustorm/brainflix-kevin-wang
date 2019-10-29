@@ -1,0 +1,18 @@
+.vid {
+	&-video {
+		height: 183px;
+		width: 100%;
+		position: relative;
+	}
+}
+
+#play-button {
+	position: absolute;
+
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	border-radius: 20%;
+	top: 305px;
+	left: 10px;
+}

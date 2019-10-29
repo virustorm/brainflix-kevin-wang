@@ -1,0 +1,34 @@
+.about {
+	padding: 0 5%;
+
+	&__title {
+		margin: 32px 0 16px 0;
+	}
+
+	&__date {
+		margin: 0 0 0 8px;
+
+		&-box {
+			display: flex;
+		}
+	}
+
+	&__author {
+		margin: 0;
+	}
+
+	&__view {
+		display: flex;
+		padding: 32px 0 24px 0;
+		border-bottom: 2px solid $mercury;
+
+		&__num {
+			margin: 0 0 0 8px;
+			font-weight: 300;
+		}
+	}
+
+	&__like__img {
+		margin-left: 10%;
+	}
+}

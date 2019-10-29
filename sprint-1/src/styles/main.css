@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "a-regular";
+  src: url("../assets/GlobalFont/AvenirNextProLT/regular.otf");
+}
+
+@font-face {
+  font-family: "a-demi";
+  src: url("../assets/GlobalFont/AvenirNextProLT/demi.otf");
+}
+
+@font-face {
+  font-family: "a-bold";
+  src: url("../assets/GlobalFont/AvenirNextProLT/bold.otf");
+}
+
+.header {
+  margin-top: 10px;
+  height: 159px;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.header__img {
+  height: 30px;
+}
+
+.header__img-box {
+  height: 38px;
+}
+
+.header__search {
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 10px;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.header__search:focus {
+  outline: none;
+}
+
+.header__search:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+}
+
+.header__submit {
+  background-color: #0095ff;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+}
+
+.header__submit-box {
+  margin: 8px 0 16px 0;
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 16px;
+}
+
+.vid-video {
+  height: 183px;
+  width: 100%;
+  position: relative;
+}
+
+#play-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 20%;
+  top: 305px;
+  left: 10px;
+}
+
+.about {
+  padding: 0 5%;
+}
+
+.about__title {
+  margin: 32px 0 16px 0;
+}
+
+.about__date {
+  margin: 0 0 0 8px;
+}
+
+.about__date-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__author {
+  margin: 0;
+}
+
+.about__view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px 0 24px 0;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.about__view__num {
+  margin: 0 0 0 8px;
+  font-weight: 300;
+}
+
+.about__like__img {
+  margin-left: 10%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=main.css.map */
