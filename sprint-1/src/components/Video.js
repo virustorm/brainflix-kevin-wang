@@ -15,7 +15,9 @@ export default function Video() {
 				<div className="video__play-box">
 					<img className="video-button" id="play-button" src={Play} alt="play" />
 				</div>
-				<input type="range" className="video-range" id="range-button" />
+				<div className="video__range">
+					<input type="range" className="video-range" id="range-button" />
+				</div>
 				<div className="vid-right">
 					<img className="video-button" id="fullScreen-button" src={FullScreen} />
 					<img className="video-button" id="volume-button" src={Volume} />

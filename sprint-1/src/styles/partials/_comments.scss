@@ -1,25 +1,33 @@
 .comments {
-	padding: 0 5%;
-	&__box {
-		display: flex;
-		justify-content: space-between;
-	}
+	margin-top: 32px;
+	padding-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $silver;
 
 	&-avatar {
+		background-color: grey;
 		height: 48px;
 		width: 48px;
 		border-radius: 50%;
+		margin-top: 20px;
 	}
 
-	&__form {
-		&-title {
-			text-transform: uppercase;
-			font-size: 12px;
-			color: $silver;
-		}
-		&-input {
-			height: 50px;
-			border: 2px solid $mercury;
+	&__date {
+		font-weight: 200;
+		color: $silver;
+	}
+
+	&__textbox {
+		font-weight: 300;
+	}
+
+	&__box {
+		width: 70%;
+
+		&-namedate {
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 }
