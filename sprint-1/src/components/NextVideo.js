@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from '../assets/Images/video-list-8.jpg';
+import Photo from '../assets/Images/video-list-5.jpg';
 
 export default function NextVideo(props) {
 	const table = props.nextMobile.map((data, index) => {
@@ -9,6 +9,7 @@ export default function NextVideo(props) {
 					<img className="next__video-thumbnail" src={data.photo} />
 					<div className="next__video-box">
 						<h3 className="next__video-title">{data.title}</h3>
+						<h3 className="next__video-bigTitle">{data.bigTitle}</h3>
 						<h4 className="next__video-author">{data.author}</h4>
 					</div>
 				</div>
@@ -16,5 +17,10 @@ export default function NextVideo(props) {
 		);
 	});
 
-	return <div>{table}</div>;
+	return (
+		<div className="next">
+			<p className="next-title">next video</p>
+			{table}
+		</div>
+	);
 }

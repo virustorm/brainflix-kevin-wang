@@ -10,7 +10,7 @@ export default function CommentsInput() {
 				<img className="commentsInput-avatar" src={Avatar} alt="avatar" />
 				<div className="commentsInput__form">
 					<h3 className="commentsInput__form-title">join the conversation</h3>
-					<form className="commentInput__form-form">
+					<form className="commentsInput__form-form">
 						<input className="commentsInput__form-input" type="text" />
 						<input className="commentsInput__form-submit" type="submit" value="COMMENT" />
 					</form>

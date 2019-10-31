@@ -4,6 +4,7 @@
 		width: 100%;
 		position: relative;
 		z-index: -1;
+		background-color: $black;
 	}
 
 	&-button {
@@ -76,6 +77,44 @@
 			z-index: 6;
 			margin-right: 8px;
 			// margin: auto;
+		}
+	}
+}
+
+@include tablet {
+	.vid {
+		&-video {
+			height: 400px;
+		}
+
+		&-button {
+			top: 430px;
+			padding: 0 3.125%;
+			display: flex;
+			justify-content: space-between;
+			width: 94%;
+		}
+	}
+}
+
+@include desktop {
+	.vid {
+		&-video {
+			height: 540px;
+		}
+
+		&-button {
+			padding: 0 0 0 18%;
+		}
+		&-button {
+			width: 65%;
+			top: 560px;
+		}
+	}
+
+	.video {
+		&__range {
+			width: 83%;
 		}
 	}
 }

@@ -44,7 +44,6 @@ export default function Comments() {
 					</h4>
 				</div>
 			</div>
-			<p className="next-title">next video</p>
 		</div>
 	);
 }

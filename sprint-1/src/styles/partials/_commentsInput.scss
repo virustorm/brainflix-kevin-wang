@@ -45,3 +45,44 @@
 		}
 	}
 }
+
+@include tablet {
+	.commentsInput {
+		padding: 0 5.2% 0 3.125%;
+
+		&__form {
+			width: 85%;
+			&-submit {
+				margin: 0 0 0 2%;
+				width: 30%;
+			}
+
+			&-input {
+				width: 70%;
+				height: 35px;
+			}
+			&-form {
+				display: flex;
+			}
+		}
+	}
+}
+@include desktop {
+	.commentsInput {
+		&-avatar {
+			margin-top: 70px;
+		}
+		&__form {
+			width: 90%;
+
+			&-input {
+				width: 80%;
+				height: 40px;
+			}
+
+			&-submit {
+				height: 40px;
+			}
+		}
+	}
+}

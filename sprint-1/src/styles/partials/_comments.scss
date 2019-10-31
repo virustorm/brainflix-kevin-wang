@@ -20,6 +20,7 @@
 
 	&__textbox {
 		font-weight: 300;
+		margin: 0;
 	}
 
 	&__box {
@@ -28,6 +29,43 @@
 		&-namedate {
 			display: flex;
 			justify-content: space-between;
+		}
+	}
+}
+
+@include tablet {
+	.comments {
+		margin-top: 32px;
+		padding-bottom: 24px;
+
+		&__box {
+			width: 86%;
+		}
+
+		&__name {
+			margin: 0 0 10px 0;
+		}
+
+		&__date {
+			margin: 0 0 0 10px;
+		}
+
+		&__textbox {
+			font-weight: 100;
+			font-size: 13px;
+		}
+
+		&__box {
+			&-namedate {
+				justify-content: start;
+			}
+		}
+	}
+}
+@include desktop {
+	.comments {
+		&__box {
+			width: 90%;
 		}
 	}
 }
