@@ -64,7 +64,9 @@
 		width: 25px;
 		height: 20px;
 	}
-
+	&__time {
+		display: none;
+	}
 	&__play {
 		&-box {
 			background-color: rgba(0, 0, 0, 0.6);
@@ -115,6 +117,11 @@
 	.video {
 		&__range {
 			width: 83%;
+		}
+		&__time {
+			display: inline-block;
+			color: white;
+			margin: 0 0 0 5%;
 		}
 	}
 }

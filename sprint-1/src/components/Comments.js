@@ -1,5 +1,4 @@
 import React from 'react';
-import CommentsInput from './CommentsInput';
 import Grey from '../assets/Images/grey.jpg';
 
 export default function Comments(props) {

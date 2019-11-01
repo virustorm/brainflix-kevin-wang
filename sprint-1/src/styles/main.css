@@ -216,6 +216,10 @@
   height: 20px;
 }
 
+.video__time {
+  display: none;
+}
+
 .video__play-box {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -264,6 +268,11 @@
   }
   .video__range {
     width: 83%;
+  }
+  .video__time {
+    display: inline-block;
+    color: white;
+    margin: 0 0 0 5%;
   }
 }
 

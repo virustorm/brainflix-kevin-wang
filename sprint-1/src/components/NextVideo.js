@@ -6,7 +6,7 @@ export default function NextVideo(props) {
 		return (
 			<div key={index} className="next">
 				<div className="next__video">
-					<img className="next__video-thumbnail" src={data.photo} />
+					<img className="next__video-thumbnail" src={data.photo} alt="thumbnail" />
 					<div className="next__video-box">
 						<h3 className="next__video-title">{data.title}</h3>
 						<h3 className="next__video-bigTitle">{data.bigTitle}</h3>
