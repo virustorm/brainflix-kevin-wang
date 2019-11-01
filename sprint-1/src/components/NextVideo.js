@@ -1,8 +1,8 @@
 import React from 'react';
-import Photo from '../assets/Images/video-list-5.jpg';
+// import Photo from '../assets/Images/video-list-5.jpg';
 
 export default function NextVideo(props) {
-	const table = props.nextMobile.map((data, index) => {
+	const table = props.data.map((data, index) => {
 		return (
 			<div key={index} className="next">
 				<div className="next__video">

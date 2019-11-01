@@ -2,7 +2,7 @@ import React from 'react';
 import Avatar from '../assets/Images/Mohan-muruge.jpg';
 import Comment from './Comments';
 
-export default function CommentsInput() {
+export default function CommentsInput(props) {
 	return (
 		<div className="commentsInput">
 			<h3 className="commentsInput__title">3 Comments</h3>
@@ -16,7 +16,7 @@ export default function CommentsInput() {
 					</form>
 				</div>
 			</div>
-			<Comment />
+			<Comment data={props} />
 		</div>
 	);
 }

@@ -6,14 +6,7 @@ import About from './components/About';
 import CommentsInput from './components/CommentsInput';
 import NextVideo from './components/NextVideo';
 
-import ThumbOne from './assets/Images/video-list-1.jpg';
-import ThumbTwo from './assets/Images/video-list-2.jpg';
-import ThumbThree from './assets/Images/video-list-3.jpg';
-import ThumbFour from './assets/Images/video-list-4.jpg';
-import ThumbFive from './assets/Images/video-list-5.jpg';
-import ThumbSix from './assets/Images/video-list-6.jpg';
-import ThumbSeven from './assets/Images/video-list-7.jpg';
-import ThumbEight from './assets/Images/video-list-8.jpg';
+import MainBody from './components/MainBody';
 
 function App() {
 	const nextMobile = [
@@ -79,18 +72,34 @@ function App() {
 		}
 	];
 
+	const mainVideo = {
+		id: 'bmx',
+		title: 'BMX Rampage: 2018 Highlights',
+		description:
+			'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen.While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
+		channel: 'red cow',
+		image: 'type of <string>',
+		views: '1,001,023',
+		likes: '110,985',
+		duration: '0:42',
+		video: 'type of <string>',
+		timestamp: '12/18/2018',
+		comments: 'type of <array>'
+	};
+
 	return (
 		<div>
 			<Header />
 			<Video />
-			<div className="desktop-info">
+			{/* <div className="desktop-info">
 				<div className="desktop__box">
 					<About vidAbout={vidAbout} />
 					<CommentsInput />
-				</div>
+				</div> */}
 
-				<NextVideo nextMobile={nextMobile} />
-			</div>
+			{/* <NextVideo nextMobile={nextMobile} /> */}
+			<MainBody />
+			{/* </div> */}
 		</div>
 	);
 }
