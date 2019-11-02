@@ -13,21 +13,15 @@
 	}
 
 	&__search {
+		background-image: url('../assets/Images/search.png');
+		background-size: 20px 20px;
+		background-position: left center;
+		background-repeat: no-repeat;
 		width: 100%;
 		border: 2px solid $mercury;
 		border-radius: 10px;
 		height: 50px;
-		padding-left: 10px;
-		transition: 0.2s ease-in-out all;
-
-		&:focus {
-			outline: none;
-		}
-
-		&:hover {
-			transform: scale(1.05);
-			box-shadow: 0 0 5px;
-		}
+		padding-left: 20px;
 	}
 
 	&__submit {
@@ -101,6 +95,21 @@
 		padding: 0 12.5%;
 		height: 70px;
 
+		&__search {
+			transition: 0.2s ease-in-out all;
+
+			&:focus {
+				border: 2px solid $brainflix-blue;
+
+				outline: none;
+			}
+
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 0 0 5px $brainflix-blue;
+			}
+		}
+
 		&__img {
 			&-box {
 				margin-right: 46%;
@@ -109,6 +118,9 @@
 		&__submit {
 			&-box {
 				width: 15%;
+			}
+			&:hover {
+				background-color: $brainflix-blue-dark;
 			}
 		}
 	}

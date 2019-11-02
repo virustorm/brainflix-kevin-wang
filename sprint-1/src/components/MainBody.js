@@ -6,6 +6,7 @@ import CommentsInput from '../components/CommentsInput';
 import Video from '../assets/Video/SampleVideo.mp4';
 import Avatar from '../assets/Images/Mohan-muruge.jpg';
 
+import ThumbZero from '../assets/Images/video-list-0.jpg';
 import ThumbOne from '../assets/Images/video-list-1.jpg';
 import ThumbTwo from '../assets/Images/video-list-2.jpg';
 import ThumbThree from '../assets/Images/video-list-3.jpg';
@@ -52,6 +53,13 @@ export default class MainBody extends Component {
 			}
 		],
 		sideVideo: [
+			{
+				title: 'BMX Rampage: 2018 Highlights',
+				bigTitle: 'BMX Rampage: 2018 Highlights',
+				author: 'Red Cow',
+				photo: ThumbZero
+			},
+
 			{
 				title: 'Become A Travel Pro In One Easy Lesson…',
 				bigTitle: 'Become A Travel Pro In One Easy Lesson',
@@ -110,7 +118,7 @@ export default class MainBody extends Component {
 					<About data={this.state} />
 					<CommentsInput data={this.state.comments} />
 				</div>
-				<NextVideo data={this.state.sideVideo} />
+				<NextVideo data={this.state} />
 			</div>
 		);
 	}

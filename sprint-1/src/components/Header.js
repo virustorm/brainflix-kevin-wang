@@ -8,7 +8,7 @@ export default function Header() {
 			<a className="header__img-box" href="./App.js">
 				<img className="header__img" src={Logo} alt="logo" />
 			</a>
-			<input className="header__search" type="search" placeholder="Seach" />
+			<input className="header__search" type="search" placeholder="Search" />
 			<div className="header__submit-box">
 				<input className="header__submit" type="submit" value=" + UPLOAD" />
 				<img className="header__avatar" src={Avatar} alt="avatar" />
