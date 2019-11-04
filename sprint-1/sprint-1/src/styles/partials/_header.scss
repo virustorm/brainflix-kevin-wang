@@ -1,0 +1,127 @@
+.header {
+	margin-top: 10px;
+	height: 159px;
+	padding: 0 5%;
+	text-align: center;
+
+	&__img {
+		height: 30px;
+
+		&-box {
+			height: 38px;
+		}
+	}
+
+	&__search {
+		background-image: url('../assets/Images/search.png');
+		background-size: 20px 20px;
+		background-position: left center;
+		background-repeat: no-repeat;
+		width: 100%;
+		border: 2px solid $mercury;
+		border-radius: 10px;
+		height: 50px;
+		padding-left: 20px;
+	}
+
+	&__submit {
+		background-color: $brainflix-blue;
+		border-radius: 5px;
+		height: 100%;
+		width: 100%;
+		color: white;
+		font-size: 15px;
+
+		&-box {
+			margin: 8px 0 16px 0;
+			height: 50px;
+			width: 100%;
+			display: flex;
+		}
+	}
+
+	&__avatar {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		margin-left: 16px;
+	}
+}
+
+@include tablet {
+	.header {
+		padding: 16px 3.125%;
+		display: flex;
+		height: 48px;
+		margin: 0;
+		align-items: center;
+
+		&__img {
+			height: 25px;
+
+			&-box {
+				display: flex;
+				align-items: center;
+				margin-right: auto;
+			}
+		}
+
+		&__search {
+			width: 30%;
+			height: 35px;
+		}
+
+		&__submit {
+			width: 200px;
+			height: 35px;
+			margin: 0 5%;
+			&-box {
+				display: flex;
+				align-items: center;
+				margin: 0;
+				width: 25%;
+			}
+		}
+		&__avatar {
+			margin: 0;
+			height: 35px;
+			width: 35px;
+		}
+	}
+}
+
+@include desktop {
+	.header {
+		padding: 0 12.5%;
+		height: 70px;
+
+		&__search {
+			transition: 0.2s ease-in-out all;
+
+			&:focus {
+				border: 2px solid $brainflix-blue;
+
+				outline: none;
+			}
+
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 0 0 5px $brainflix-blue;
+			}
+		}
+
+		&__img {
+			&-box {
+				margin-right: 46%;
+			}
+		}
+		&__submit {
+			&-box {
+				width: 15%;
+			}
+			&:hover {
+				background-color: $brainflix-blue-dark;
+			}
+		}
+	}
+}

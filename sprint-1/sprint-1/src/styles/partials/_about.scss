@@ -1,0 +1,103 @@
+.about {
+	padding: 0 5%;
+
+	&__title {
+		margin: 32px 0 16px 0;
+	}
+
+	&__date {
+		margin: 0 0 0 8px;
+		color: $silver;
+		font-weight: 100;
+
+		&-box {
+			display: flex;
+		}
+	}
+
+	&__author {
+		margin: 0;
+		text-transform: capitalize;
+	}
+
+	&__view {
+		display: flex;
+		padding: 32px 0 24px 0;
+		border-bottom: 2px solid $mercury;
+
+		&__num {
+			margin: 0 0 0 8px;
+			font-weight: 300;
+		}
+	}
+
+	&__like__img {
+		margin-left: 10%;
+	}
+
+	&__para {
+		margin: 24px 0 40px 0;
+		&-text {
+			margin: 0;
+			font-weight: 100;
+		}
+	}
+}
+
+@include tablet {
+	.about {
+		padding: 0 3.125%;
+
+		&__title {
+			margin: 48px 0 24px 0;
+		}
+
+		&__view {
+			padding: 0;
+			border: none;
+			margin-right: 3.125%;
+
+			&__num {
+				margin-left: 8px;
+			}
+		}
+
+		&__like {
+			&__img {
+				margin-left: 24px;
+			}
+		}
+
+		&__dateview-box {
+			display: flex;
+			border-bottom: 2px solid $silver;
+			padding-bottom: 24px;
+			justify-content: space-between;
+		}
+
+		&__para {
+			padding-right: 30%;
+			margin: 40px 0 64px 0;
+			&-text {
+				font-size: 14px;
+			}
+		}
+	}
+}
+@include desktop {
+	.about {
+		&__title {
+			margin: 0 0 20px 0;
+			font-family: a-bold;
+			font-size: 35px;
+		}
+		&__author {
+			font-family: a-demi;
+		}
+		&__para {
+			&-text {
+				font-size: 18px;
+			}
+		}
+	}
+}

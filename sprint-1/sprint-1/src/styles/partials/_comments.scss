@@ -1,0 +1,71 @@
+.comments {
+	margin-top: 32px;
+	padding-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $mercury;
+
+	&-avatar {
+		background-color: grey;
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+		margin-top: 20px;
+	}
+
+	&__date {
+		font-weight: 200;
+		color: $silver;
+	}
+
+	&__textbox {
+		font-weight: 300;
+		margin: 0;
+	}
+
+	&__box {
+		width: 70%;
+
+		&-namedate {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+@include tablet {
+	.comments {
+		margin-top: 32px;
+		padding-bottom: 24px;
+
+		&__box {
+			width: 86%;
+		}
+
+		&__name {
+			margin: 0 0 10px 0;
+		}
+
+		&__date {
+			margin: 0 0 0 10px;
+		}
+
+		&__textbox {
+			font-weight: 100;
+			font-size: 13px;
+		}
+
+		&__box {
+			&-namedate {
+				justify-content: start;
+			}
+		}
+	}
+}
+@include desktop {
+	.comments {
+		&__box {
+			width: 90%;
+		}
+	}
+}
