@@ -1,0 +1,188 @@
+.title {
+	color: $silver;
+	text-transform: uppercase;
+}
+
+.upload {
+	padding: 0 5%;
+
+	&-title {
+		font-family: a-demi;
+		padding: 24px 0 32px 0;
+		border-top: 1px solid $mercury;
+		text-transform: capitalize;
+		margin: 0;
+	}
+
+	&__thumbnail {
+		&-title {
+			margin: 0 0 10px 0;
+		}
+		&-video {
+			height: 153px;
+		}
+	}
+
+	&__input {
+		&__title {
+			margin: 32px 0 5px 0;
+
+			&-input {
+				height: 40px;
+				border: 1px solid $mercury;
+				width: 95%;
+				border-radius: 10px;
+				padding-left: 5%;
+				color: black;
+
+				&:focus {
+					outline: none;
+					border: 1px solid $brainflix-blue;
+				}
+			}
+		}
+	}
+	&__des {
+		&-input {
+			height: 143px;
+			border: 1px solid $mercury;
+			width: 95%;
+			border-radius: 10px;
+			padding-left: 5%;
+			color: black;
+
+			&:focus {
+				outline: none;
+				border: 1px solid $brainflix-blue;
+			}
+		}
+	}
+	&__btn {
+		&-pub {
+			font-family: a-demi;
+			color: $white;
+			margin: 32px 0 24px 0;
+			height: 50px;
+			width: 100%;
+			background-color: $brainflix-blue;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+		&-can {
+			font-family: a-demi;
+			color: $brainflix-blue;
+			width: 100%;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+	}
+}
+@include tablet {
+	.upload {
+		padding: 0 3.125%;
+
+		&-title {
+			padding: 48px 0 32px 0;
+			border: none;
+			border-bottom: 2px solid $mercury;
+		}
+		&__thumbnail {
+			margin: 40px 0;
+			&-video {
+				height: 183px;
+				width: 48%;
+			}
+		}
+
+		&__input {
+			&__title {
+				margin: 0;
+				&-text {
+					margin: 0 0 2px 0;
+					font-size: 10px;
+				}
+				&-input {
+					padding-left: 2%;
+					width: 98%;
+				}
+			}
+		}
+		&__des {
+			padding-bottom: 40px;
+			border-bottom: 1px solid $mercury;
+			&-title {
+				margin: 24px 0 3px 0;
+				font-size: 10px;
+			}
+			&-input {
+				padding-left: 2%;
+				width: 98%;
+			}
+		}
+		&__btn {
+			margin: 40px 0 100px 0;
+			display: flex;
+			flex-direction: row-reverse;
+			&-pub {
+				width: 22%;
+				margin: 0;
+			}
+			&-can {
+				width: 22%;
+			}
+		}
+	}
+}
+@include desktop {
+	.upload {
+		padding: 0 12.5%;
+		&-title {
+			font-family: a-bold;
+			font-size: 35px;
+		}
+		&-deskBox {
+			display: flex;
+		}
+		&__thumbnail {
+			width: 32%;
+			&-video {
+				width: 100%;
+			}
+		}
+		&__input {
+			width: 68%;
+			margin: 40px 0 40px 2%;
+			&__title {
+				&-text {
+					font-size: 15px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__des {
+			padding-bottom: 0;
+			border: none;
+			&-title {
+				font-size: 15px;
+			}
+			&-input {
+				height: 94px;
+			}
+		}
+
+		&-deskBox {
+			padding-bottom: 40px;
+			border-bottom: 2px solid $silver;
+		}
+
+		&__btn {
+			&-pub {
+				width: 15%;
+			}
+			&-can {
+				width: 15%;
+			}
+		}
+	}
+}

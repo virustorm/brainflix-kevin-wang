@@ -45,8 +45,23 @@
   border-radius: 5px;
   height: 100%;
   width: 100%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__submit-btn {
   color: white;
   font-size: 15px;
+  background-color: #0095ff;
+  border: none;
 }
 
 .header__submit-box {
@@ -136,6 +151,22 @@
   }
   .header__img-box {
     margin-right: 46%;
+  }
+  .header__submit-btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    -webkit-transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
+  }
+  .header__submit-btn:hover {
+    background-color: #0065ad;
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .header__submit-btn:focus {
+    outline: none;
   }
   .header__submit-box {
     width: 15%;
@@ -661,6 +692,190 @@
   }
   .desktop__box {
     width: 100%;
+  }
+}
+
+.title {
+  color: #afafaf;
+  text-transform: uppercase;
+}
+
+.upload {
+  padding: 0 5%;
+}
+
+.upload-title {
+  font-family: a-demi;
+  padding: 24px 0 32px 0;
+  border-top: 1px solid #e1e1e1;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.upload__thumbnail-title {
+  margin: 0 0 10px 0;
+}
+
+.upload__thumbnail-video {
+  height: 153px;
+}
+
+.upload__input__title {
+  margin: 32px 0 5px 0;
+}
+
+.upload__input__title-input {
+  height: 40px;
+  border: 1px solid #e1e1e1;
+  width: 95%;
+  border-radius: 10px;
+  padding-left: 5%;
+  color: black;
+}
+
+.upload__input__title-input:focus {
+  outline: none;
+  border: 1px solid #0095ff;
+}
+
+.upload__des-input {
+  height: 143px;
+  border: 1px solid #e1e1e1;
+  width: 95%;
+  border-radius: 10px;
+  padding-left: 5%;
+  color: black;
+}
+
+.upload__des-input:focus {
+  outline: none;
+  border: 1px solid #0095ff;
+}
+
+.upload__btn-pub {
+  font-family: a-demi;
+  color: #ffffff;
+  margin: 32px 0 24px 0;
+  height: 50px;
+  width: 100%;
+  background-color: #0095ff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.upload__btn-can {
+  font-family: a-demi;
+  color: #0095ff;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 768px) {
+  .upload {
+    padding: 0 3.125%;
+  }
+  .upload-title {
+    padding: 48px 0 32px 0;
+    border: none;
+    border-bottom: 2px solid #e1e1e1;
+  }
+  .upload__thumbnail {
+    margin: 40px 0;
+  }
+  .upload__thumbnail-video {
+    height: 183px;
+    width: 48%;
+  }
+  .upload__input__title {
+    margin: 0;
+  }
+  .upload__input__title-text {
+    margin: 0 0 2px 0;
+    font-size: 10px;
+  }
+  .upload__input__title-input {
+    padding-left: 2%;
+    width: 98%;
+  }
+  .upload__des {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .upload__des-title {
+    margin: 24px 0 3px 0;
+    font-size: 10px;
+  }
+  .upload__des-input {
+    padding-left: 2%;
+    width: 98%;
+  }
+  .upload__btn {
+    margin: 40px 0 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .upload__btn-pub {
+    width: 22%;
+    margin: 0;
+  }
+  .upload__btn-can {
+    width: 22%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .upload {
+    padding: 0 12.5%;
+  }
+  .upload-title {
+    font-family: a-bold;
+    font-size: 35px;
+  }
+  .upload-deskBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .upload__thumbnail {
+    width: 32%;
+  }
+  .upload__thumbnail-video {
+    width: 100%;
+  }
+  .upload__input {
+    width: 68%;
+    margin: 40px 0 40px 2%;
+  }
+  .upload__input__title-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .upload__des {
+    padding-bottom: 0;
+    border: none;
+  }
+  .upload__des-title {
+    font-size: 15px;
+  }
+  .upload__des-input {
+    height: 94px;
+  }
+  .upload-deskBox {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #afafaf;
+  }
+  .upload__btn-pub {
+    width: 15%;
+  }
+  .upload__btn-can {
+    width: 15%;
   }
 }
 

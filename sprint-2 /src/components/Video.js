@@ -3,13 +3,11 @@ import Sample from '../assets/Video/SampleVideo.mp4';
 import Play from '../assets/Icons/SVG/Icon-play.svg';
 import FullScreen from '../assets/Icons/SVG/Icon-fullscreen.svg';
 import Volume from '../assets/Icons/SVG/Icon-volume.svg';
-import PlaceHolder from '../assets/Images/video-list-0.jpg';
 
 export default function Video(props) {
-	console.log(props);
 	return (
 		<div className="vid">
-			<video className="vid-video" poster={PlaceHolder}>
+			<video className="vid-video" poster={props.data.mainVideo.image}>
 				<source src={Sample} type="video/mp4" />
 			</video>
 
@@ -19,7 +17,7 @@ export default function Video(props) {
 				</div>
 				<div className="video__range">
 					<input type="range" className="video-range" id="range-button" />
-					<h5 className="video__time">0:00/0:42</h5>
+					<h5 className="video__time">0:00/{props.data.mainVideo.duration}</h5>
 				</div>
 				<div className="vid-right">
 					<img className="video-button" id="fullScreen-button" src={FullScreen} alt="fullscreen" />

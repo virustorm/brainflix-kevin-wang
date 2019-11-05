@@ -16,7 +16,7 @@ export default function CommentsInput(props) {
 					</form>
 				</div>
 			</div>
-			<Comment data={props} />
+			<Comment data={props.data} />
 		</div>
 	);
 }

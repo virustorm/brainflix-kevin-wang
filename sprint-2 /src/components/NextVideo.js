@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function NextVideo(props) {
 	const table = props.data.sideVideo.map((data, index) => {
-		if (data.id !== props.data.id) {
+		if (data.id !== props.data.mainVideo.id) {
 			return (
-				<Link className="next__video-a" to={`video/${data.id}`}>
-					<div key={index} className="next">
+				<Link key={index} className="next__video-a" to={`/video/${data.id}`}>
+					<div className="next">
 						<div className="next__video">
 							<img className="next__video-thumbnail" src={data.image} alt="thumbnail" />
 							<div className="next__video-box">

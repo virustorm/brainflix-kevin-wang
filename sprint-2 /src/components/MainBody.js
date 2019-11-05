@@ -6,7 +6,7 @@ import Video from '../components/Video';
 
 import 'axios';
 
-import Avatar from '../assets/Images/Mohan-muruge.jpg';
+// import Avatar from '../assets/Images/Mohan-muruge.jpg';
 
 const axios = require('axios');
 export default class MainBody extends Component {
@@ -14,40 +14,39 @@ export default class MainBody extends Component {
 		axios
 			.get('https://project-2-api.herokuapp.com/videos?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585')
 			.then((result) => {
-				this.setState({ sideVideo: result.data });
-			});
-		axios
-			.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585')
-			.then((result) => {
-				// console.log(result.data);
 				this.setState({
-					id: result.data.id,
-					title: result.data.title,
-					description: result.data.description,
-					channel: result.data.channel,
-					image: result.data.image,
-					views: result.data.views,
-					likes: result.data.likes,
-					duration: result.data.duration,
-					video: result.data.video,
-					comments: result.data.comments
+					currentId: result.data[0].id,
+					sideVideo: result.data
 				});
+				axios
+					.get(
+						`https://project-2-api.herokuapp.com/videos/${this.state
+							.currentId}?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585`
+					)
+					.then((result) => {
+						this.setState({
+							mainVideo: result.data
+						});
+					});
 			});
 	}
 
+	componentDidUpdate(prevProps) {
+		if (this.props.match.params.videoId !== prevProps.match.params.videoId) {
+			axios
+				.get(
+					`https://project-2-api.herokuapp.com/videos/${this.props.match.params
+						.videoId}?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585`
+				)
+				.then((result) => {
+					this.setState({ mainVideo: result.data });
+				});
+		}
+	}
+
 	state = {
-		id: '',
-		title: '',
-		description: '',
-		channel: '',
-		image: '',
-		views: '',
-		likes: '',
-		duration: '',
-		video: '',
-		timestamp: '',
-		id: '',
-		comments: [],
+		currentId: '',
+		mainVideo: {},
 		sideVideo: []
 	};
 
@@ -58,7 +57,7 @@ export default class MainBody extends Component {
 				<div className="desktop-info">
 					<div className="desktop__box">
 						<About data={this.state} />
-						<CommentsInput data={this.state.comments} />
+						<CommentsInput data={this.state.mainVideo} />
 					</div>
 					<NextVideo data={this.state} />
 				</div>
