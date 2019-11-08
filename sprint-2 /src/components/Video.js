@@ -5,9 +5,10 @@ import FullScreen from '../assets/Icons/SVG/Icon-fullscreen.svg';
 import Volume from '../assets/Icons/SVG/Icon-volume.svg';
 
 export default function Video(props) {
+	console.log(props.data.mainVideo.image);
 	return (
 		<div className="vid">
-			<video className="vid-video" poster={props.data.mainVideo.image}>
+			<video className="vid-video" poster={`${props.data.mainVideo.image}`}>
 				<source src={Sample} type="video/mp4" />
 			</video>
 
