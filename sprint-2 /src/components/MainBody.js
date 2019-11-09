@@ -11,17 +11,20 @@ import 'axios';
 const axios = require('axios');
 export default class MainBody extends Component {
 	componentDidMount() {
+		let firstVideo = '';
 		axios
 			.get('https://project-2-api.herokuapp.com/videos?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585')
 			.then((result) => {
 				this.setState({
-					currentId: result.data[0].id,
+					// currentId: result.data[0].id,
 					sideVideo: result.data
 				});
+				this.props.match.params.videoId !== undefined
+					? (firstVideo = this.props.match.params.videoId)
+					: (firstVideo = '1af0jruup5gu');
 				axios
 					.get(
-						`https://project-2-api.herokuapp.com/videos/${this.state
-							.currentId}?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585`
+						`https://project-2-api.herokuapp.com/videos/${firstVideo}?api_key=533cc9b0-6f01-4d1c-aabb-d1000150b585`
 					)
 					.then((result) => {
 						this.setState({
@@ -45,7 +48,6 @@ export default class MainBody extends Component {
 	}
 
 	state = {
-		currentId: '',
 		mainVideo: {},
 		sideVideo: []
 	};
