@@ -5,9 +5,10 @@ import axios from 'axios';
 export default class Upload extends React.Component {
 	upload = () => {
 		console.log(this.title.value);
-		axios.post('/videos', {
+		axios.post('http://localhost:5000/videos', {
 			title: this.title.value,
-			description: this.desc.value
+			description: this.desc.value,
+			image: Photo
 		});
 	};
 	render() {
@@ -28,6 +29,7 @@ export default class Upload extends React.Component {
 									className="upload__input__title-input"
 									type="text"
 									placeholder="Add a title to your video"
+									ref={(ref) => (this.title = ref)}
 								/>
 							</div>
 							<div className="upload__des">
@@ -36,12 +38,13 @@ export default class Upload extends React.Component {
 									className="upload__des-input"
 									type="text"
 									placeholder="Add a description of your video"
+									ref={(ref) => (this.desc = ref)}
 								/>
 							</div>
 						</div>
 					</div>
 					<div className="upload__btn">
-						<button className="upload__btn-pub" type="button">
+						<button className="upload__btn-pub" type="button" onClick={this.upload}>
 							Publish
 						</button>
 						<button className="upload__btn-can" type="button">

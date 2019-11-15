@@ -22,7 +22,7 @@ export default class MainBody extends Component {
 				: (firstVideo = '1af0jruup5gu');
 			axios.get(`http://localhost:5000/videos/${firstVideo}`).then((result) => {
 				this.setState({
-					mainVideo: result.data
+					mainVideo: result.data[0]
 				});
 			});
 		});

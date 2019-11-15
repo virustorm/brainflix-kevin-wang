@@ -5,7 +5,6 @@ import MainBody from './components/MainBody';
 import './styles/main.css';
 import Upload from './components/Upload';
 // import Video from './components/Video';
-
 // import MainBody from './components/MainBody';
 
 function App() {
