@@ -1,0 +1,12 @@
+@include desktop {
+	.desktop {
+		&-info {
+			display: flex;
+			padding: 0 12.5%;
+			margin-top: 40px;
+		}
+		&__box {
+			width: 100%;
+		}
+	}
+}
