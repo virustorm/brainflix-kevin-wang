@@ -4,8 +4,8 @@ const fileName = __dirname + '/../../model/video.json';
 let videos = require(fileName);
 const detailName = __dirname + '/../../model/videoDetail.json';
 let detailVideos = require(detailName);
-// const helper = require('../../helper/helper');
-
+const helper = require('../../helper/helper');
+const randomHelper = require('../../helper/randomHelper');
 //  Get all videos
 router.get('/', (req, res) => {
 	res.json(videos);
@@ -26,25 +26,53 @@ router.post('/', (req, res) => {
 	const newVideo = {
 		id: helper.getNewId(videos),
 		title: req.body.title,
-		channel: req.body.channel,
-		// image: req.body.image,
+		channel: 'BrainStation',
+		image: req.body.image,
 		description: req.body.description,
-		views: 0,
-		likes: 0,
+		views: randomHelper.randomInt(),
+		likes: randomHelper.randomInt(),
 		duration: 0,
 		video: '',
 		timestamp: 0,
-		comments: []
+		comments: [
+			{
+				name: randomHelper.randomName(),
+				comment: randomHelper.randomComment(),
+				id: randomHelper.getNewId(),
+				likes: randomHelper.randomInt(),
+				timestamp: randomHelper.randomInt()
+				// avatar: randomHelper.randomAvatar()
+			},
+			{
+				name: randomHelper.randomName(),
+				comment: randomHelper.randomComment(),
+				id: randomHelper.getNewId(),
+				likes: randomHelper.randomInt(),
+				timestamp: randomHelper.randomInt()
+				// avatar: randomHelper.randomAvatar()
+			},
+			{
+				name: randomHelper.randomName(),
+				comment: randomHelper.randomComment(),
+				id: randomHelper.getNewId(),
+				likes: randomHelper.randomInt(),
+				timestamp: randomHelper.randomInt()
+				// avatar: randomHelper.randomAvatar()
+			}
+		]
 	};
-	if (!newVide.title || !newVideo.channel || !newVideo.description) {
+	if (!newVideo.title || !newVideo.description) {
 		return res.status(400).json({
 			errorMessage: 'Please provide name, email and course for new student'
 		});
 	}
-	students.push(newStudent);
+	detailVideos.push(newVideo);
 	// console.log(JSON.stringify(students));
-	helper.writeJSONFile(fileName, students);
-	res.json(students);
+	helper.writeJSONFile(detailName, detailVideos);
+	res.json(detailVideos);
+	videos.push({ id: newVideo.id, title: newVideo.title, channel: newVideo.channel, image: newVideo.image });
+	helper.writeJSONFile(fileName, videos);
+	res.json(videos);
 });
 
 module.exports = router;

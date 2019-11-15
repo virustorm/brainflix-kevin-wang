@@ -1,19 +1,15 @@
 const express = require('express');
-const path = require('path');
-const logger = require('./middleware/logger');
+var bodyParser = require('body-parser');
 var cors = require('cors');
-
 const app = express();
 
-const videoRoutes = require('./model/video.json');
+app.use(express.static('public'));
 
 app.get('/', function(req, res) {
 	res.send('get me a fking job plz');
 });
 app.use(cors());
-// app.route('/videos').get(function(req, res) {
-// 	res.send(videoRoutes);
-// });
+app.use(bodyParser.json());
 
 app.use('/videos', require('./routes/api/videos'));
 
