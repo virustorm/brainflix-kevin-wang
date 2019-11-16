@@ -1,6 +1,7 @@
 import React from 'react';
 import Photo from '../assets/Images/Upload-video-preview.jpg';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default class Upload extends React.Component {
 	upload = () => {
@@ -10,6 +11,8 @@ export default class Upload extends React.Component {
 			description: this.desc.value,
 			image: Photo
 		});
+		this.title.value.reset();
+		this.desc.value.reset();
 	};
 	render() {
 		return (
@@ -47,9 +50,11 @@ export default class Upload extends React.Component {
 						<button className="upload__btn-pub" type="button" onClick={this.upload}>
 							Publish
 						</button>
-						<button className="upload__btn-can" type="button">
-							Cancel
-						</button>
+						<Link className="upload__btn-canc" to="/">
+							<button className="upload__btn-can" type="button">
+								Cancel
+							</button>
+						</Link>
 					</div>
 				</form>
 			</div>
