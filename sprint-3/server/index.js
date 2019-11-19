@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-	res.send('get me a fking job plz');
+	res.send('hi');
 });
 app.use(cors());
 app.use(bodyParser.json());
