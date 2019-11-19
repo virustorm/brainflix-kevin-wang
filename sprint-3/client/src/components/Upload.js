@@ -11,8 +11,6 @@ export default class Upload extends React.Component {
 			description: this.desc.value,
 			image: Photo
 		});
-		this.title.value.reset();
-		this.desc.value.reset();
 	};
 	render() {
 		return (
